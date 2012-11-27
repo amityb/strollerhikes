@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#primary div.gce-widget-list ul.gce-list {
+	list-style-type: none;
+	margin-left: 0;
+}
+
+.gce-list-title {
+}
+
+#primary .gce-widget-list .gce-list .gce-list-event {
+	background-color: transparent;
+}
+
