@@ -1,11 +1,10 @@
 <?php
 /**
  * Template Name: Chart Template
- * The template file for the hike chart.
+ * The template file for the table of locations with aggregated hike features.
  *
  * @package WordPress
- * @subpackage Twenty Ten
- * @since Twenty Ten 1.0
+ * @subpackage StrollerHikes
  */
 ?>
 <?php get_header(); ?>

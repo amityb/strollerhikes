@@ -1,12 +1,12 @@
 <?php
 /**
- * TwentyTen functions and definitions
+ * StrollerHikes/TwentyTen functions and definitions
  *
  * Sets up the theme and provides some helper functions. Some helper functions
  * are used in the theme as custom template tags. Others are attached to action and
  * filter hooks in WordPress to change core functionality.
  *
- * The first function, twentyten_setup(), sets up the theme by registering support
+ * The first function, strollerhikes_setup(), sets up the theme by registering support
  * for various features in WordPress, such as post thumbnails, navigation menus, and the like.
  *
  * When using a child theme (see http://codex.wordpress.org/Theme_Development and
@@ -34,8 +34,8 @@
  * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
  *
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage StrollerHikes
+ * @since StrollerHikes 1.0
  */
 
 /**
@@ -47,8 +47,8 @@
 if ( ! isset( $content_width ) )
 	$content_width = 640;
 
-/** Tell WordPress to run twentyten_setup() when the 'after_setup_theme' hook is run. */
-add_action( 'after_setup_theme', 'twentyten_setup' );
+/** Tell WordPress to run strollerhikes_setup() when the 'after_setup_theme' hook is run. */
+add_action( 'after_setup_theme', 'strollerhikes_setup' );
 
 add_action( 'wp_enqueue_scripts', 'theme_styles');
 
@@ -66,7 +66,7 @@ function theme_styles() {
 
 endif;
 
-if ( ! function_exists( 'twentyten_setup' ) ):
+if ( ! function_exists( 'strollerhikes_setup' ) ):
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -74,7 +74,7 @@ if ( ! function_exists( 'twentyten_setup' ) ):
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * To override twentyten_setup() in a child theme, add your own twentyten_setup to your child theme's
+ * To override strollerhikes_setup() in a child theme, add your own strollerhikes_setup to your child theme's
  * functions.php file.
  *
  * @uses add_theme_support() To add support for post thumbnails and automatic feed links.
@@ -86,9 +86,9 @@ if ( ! function_exists( 'twentyten_setup' ) ):
  * @uses register_default_headers() To register the default custom header images provided with the theme.
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
- * @since Twenty Ten 1.0
+ * @since StrollerHikes 1.0
  */
-function twentyten_setup() {
+function strollerhikes_setup() {
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style();
@@ -104,7 +104,7 @@ function twentyten_setup() {
 
 	// Make theme available for translation
 	// Translations can be filed in the /languages/ directory
-	load_theme_textdomain( 'twentyten', TEMPLATEPATH . '/languages' );
+	load_theme_textdomain( 'strollerhikes', TEMPLATEPATH . '/languages' );
 
 	$locale = get_locale();
 	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
@@ -146,83 +146,6 @@ function twentyten_setup() {
 	add_custom_image_header( '', 'twentyten_admin_header_style' );
 
 	// ... and thus ends the changeable header business.
-
-	// Default custom headers packaged with the theme. %s is a placeholder for the theme template directory URI.
-	register_default_headers( array(
-		'berries' => array(
-			'url' => '%s/images/headers/berries.jpg',
-			'thumbnail_url' => '%s/images/headers/berries-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Berries', 'twentyten' )
-		),
-		'cherryblossom' => array(
-			'url' => '%s/images/headers/cherryblossoms.jpg',
-			'thumbnail_url' => '%s/images/headers/cherryblossoms-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Cherry Blossoms', 'twentyten' )
-		),
-		'concave' => array(
-			'url' => '%s/images/headers/concave.jpg',
-			'thumbnail_url' => '%s/images/headers/concave-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Concave', 'twentyten' )
-		),
-		'fern' => array(
-			'url' => '%s/images/headers/fern.jpg',
-			'thumbnail_url' => '%s/images/headers/fern-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Fern', 'twentyten' )
-		),
-		'forestfloor' => array(
-			'url' => '%s/images/headers/forestfloor.jpg',
-			'thumbnail_url' => '%s/images/headers/forestfloor-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Forest Floor', 'twentyten' )
-		),
-		'inkwell' => array(
-			'url' => '%s/images/headers/inkwell.jpg',
-			'thumbnail_url' => '%s/images/headers/inkwell-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Inkwell', 'twentyten' )
-		),
-		'path' => array(
-			'url' => '%s/images/headers/path.jpg',
-			'thumbnail_url' => '%s/images/headers/path-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Path', 'twentyten' )
-		),
-		'sunset' => array(
-			'url' => '%s/images/headers/sunset.jpg',
-			'thumbnail_url' => '%s/images/headers/sunset-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Sunset', 'twentyten' )
-		)
-	) );
-}
-endif;
-
-if ( ! function_exists( 'twentyten_admin_header_style' ) ) :
-/**
- * Styles the header image displayed on the Appearance > Header admin panel.
- *
- * Referenced via add_custom_image_header() in twentyten_setup().
- *
- * @since Twenty Ten 1.0
- */
-function twentyten_admin_header_style() {
-?>
-<style type="text/css">
-/* Shows the same border as on front end */
-#headimg {
-	border-bottom: 1px solid #000;
-	border-top: 4px solid #000;
-}
-/* If NO_HEADER_TEXT is false, you would style the text with these selectors:
-	#headimg #name { }
-	#headimg #desc { }
-*/
-</style>
-<?php
 }
 endif;
 

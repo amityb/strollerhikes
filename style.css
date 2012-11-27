@@ -1,12 +1,17 @@
 /*
 Theme Name: StrollerHikes
 Theme URI: http://www.strollerhikes.com/
-Description: The StrollerHikes theme is based on the 2010 theme for WordPress.  Make it yours with a custom menu, header image, and background. It supports six widgetized areas (two in the sidebar, four in the footer) and featured images (thumbnails for gallery posts and custom header images for posts and pages). It includes stylesheets for print and the admin Visual Editor, special styles for posts in the "Asides" and "Gallery" categories, and has an optional one-column page template that removes the sidebar.
+Description: The StrollerHikes theme is based on the 2010 theme for WordPress.  It supports a custom menu and nine 
+widgetized areas (two in the sidebar, three in the subfooter, and four in the full footer). It includes stylesheets for print 
+and the admin Visual Editor, special styles for posts in the "Asides" and "Gallery" categories, and has an optional one-column 
+page template that removes the sidebar.
+It has two custom types: Locations and Hikes - with custom templates for single hikes and locations.
+It has a custom template to display a table of all locations and an aggregation of each location's hike features.
 Author: the WordPress team (w/ customizations by Amity Binkert)
-Version: 1.2
+Version: 1.0
 License: GNU General Public License
 License URI: license.txt
-Tags: black, blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu
+Tags: black, blue, gray, white, two-columns, fixed-width, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu
 */
 
 
@@ -377,7 +382,7 @@ a:hover {
 	top: 70px;
 }
 
-.shr_class {
+.shr_class { /* Shareaholic */
 	position: absolute;
 	right: 35px;
 	bottom: 0;

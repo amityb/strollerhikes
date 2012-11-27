@@ -1,31 +1,16 @@
 <?php
-
 /**
-
- * The Header for our theme.
-
+ * The Header for StrollerHikes theme - include StrollerHikes logo.
  *
-
  * Displays all of the <head> section and everything up till <div id="main">
-
  *
-
  * @package WordPress
-
- * @subpackage Twenty_Ten
-
- * @since Twenty Ten 1.0
-
+ * @subpackage StrollerHikes
  */
-
 ?><!DOCTYPE html>
-
 <html <?php language_attributes(); ?>>
-
 <head>
-
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-
 <title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
@@ -68,17 +53,12 @@
 
 <body <?php body_class(); ?>>
 <div id="wrapper" class="hfeed">
-
 	<div id="header">
-
 		<div id="masthead">
-
 			<div id="branding" role="banner">
-
 				<img src="<?php bloginfo('template_directory'); ?>/images/StrollerHikesMainLogoTrans2.png" align= "left" hspace = "10" width="273" height = "153" title="StrollerHikes.com banner"/></img>
 
-				<!-- Paypal form -->
-		
+				<!-- Paypal form -->	
 		        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="PayPal">
 		        <input type="hidden" name="cmd" value="_s-xclick">
 		        <input type="hidden" name="hosted_button_id" value="2846169">
@@ -91,22 +71,13 @@
 
 
 			<div id="access" role="navigation">
-
 			  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-
 				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentyten' ); ?>"><?php _e( 'Skip to content', 'twentyten' ); ?></a></div>
-
 				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
-
 				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 
 			</div><!-- #access -->
-
 		</div><!-- #masthead -->
-        
 	</div><!-- #header -->
-
-
-
 	<div id="main">
 

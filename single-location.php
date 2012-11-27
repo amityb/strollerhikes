@@ -1,7 +1,14 @@
 <?php
 /*
-Template Name: Location Template
-*/
+ * Template Name: Location Template
+ * 
+ * Displays a single custom type of location with a carousel of images, a list of attractions, a map of the general location,
+ * and a table of associated hikes.
+ * 
+ * @package WordPress
+ * @subpackage StrollerHikes
+ * @since StrollerHikes 1.0
+ */
 get_header(); 
 ?>
 

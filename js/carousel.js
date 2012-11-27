@@ -22,18 +22,4 @@ jQuery(document).ready(function($) {
 	$("#location-gallery a").click(function() {
 		$("#location-gallery").trigger("pause");
 	});
-/*	$("#location-gallery").carouFredSel( {
-		auto: {
-			items	: {
-				visible: 3,
-				minimum: 4
-			},
-			duration: 6000,
-			easing: "linear",
-			timeoutDuration: 0
-		}
-	}, {
-		debug: true
-	});	
-	*/
 });

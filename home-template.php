@@ -6,8 +6,7 @@
  * This is the template file for the front page.
  *
  * @package WordPress
- * @subpackage Twenty Ten
- * @since Twenty Ten 1.0
+ * @subpackage StrollerHikes
  */
  
 function get_single_excerpt( $category, $title) {

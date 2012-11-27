@@ -1,7 +1,14 @@
 <?php
 /*
-Template Name: Hike Template
-*/
+ * Template Name: Hike Template
+ * 
+ * Displays a single custom type of hike with a carousel of images, a hike description, a map of the hike route,
+ * and a list of hike features/attributes (terrain, trail surface, distance, etc).
+ * 
+ * @package WordPress
+ * @subpackage StrollerHikes
+ * @since StrollerHikes 1.0
+ */
 get_header(); 
 ?>
 
