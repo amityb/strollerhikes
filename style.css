@@ -757,6 +757,43 @@ body.page .edit-link {
 	border: 1px solid #efefef;
 }
 
+/* Lists on Hike Details Page */
+.hike-icons li {
+	list-style-type: none;
+}
+
+.hike-icons li img {
+	margin-right: 10px;
+}
+
+/* Board and Staff Tables */
+table.board-staff td {
+	vertical-align: middle;
+}
+table.board-staff td img {
+	padding: 5px;
+}
+
+.staff {
+	width: 28%;
+	float: left;
+	margin: 10px;
+	min-height: 300px;
+}
+
+.volunteer-name {
+	font-weight: bold;
+}
+
+.board-staff .volunteer-name, .staff .volunteer-name {
+	display: block;
+}
+
+.staff-no-pic {
+	float: none;
+	clear: both;
+}
+
 /* Old settings */
 /*.caroufredsel_wrapper {
 	padding: 20px 0 20px 40px;
